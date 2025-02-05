@@ -24,8 +24,8 @@ TMP_DIR_PATH="$(mktemp -p ${DATA_DIR_PATH} -d)/"
 echo "${SCRIPT_NAME}: TMP_DIR_PATH: $TMP_DIR_PATH"
 
 cleanup() {
-    echo "${SCRIPT_NAME}: Cleaning up temporary files..."
-    rm -rf "$TMP_DIR_PATH"
+  echo "${SCRIPT_NAME}: Cleaning up temporary files..."
+  rm -rf "$TMP_DIR_PATH"
 }
 
 # スクリプト終了時・異常終了時に cleanup を実行
