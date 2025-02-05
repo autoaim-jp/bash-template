@@ -21,6 +21,7 @@ INPUT_FILE_PATH="${2:-"input.txt"}"
 
 # tmp
 TMP_DIR_PATH="$(mktemp -p ${DATA_DIR_PATH} -d)/"
+echo "${SCRIPT_NAME}: TMP_DIR_PATH: $TMP_DIR_PATH"
 
 cleanup() {
     echo "${SCRIPT_NAME}: Cleaning up temporary files..."
