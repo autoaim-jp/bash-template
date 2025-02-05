@@ -22,7 +22,7 @@ check_command_available() {
 }
 
 # init2
-check_command_available "jq" "curl" # 必要なコマンドがあるかどうかあらかじめ確認
+# check_command_available "jq" "curl" # 必要なコマンドがあるかどうかあらかじめ確認
 debug_log "start" # デバッグモードがオンになっているかどうかがここでわかる
 
 # constant
