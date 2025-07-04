@@ -7,6 +7,12 @@ cd "$(dirname "$0")" # 作業ディレクトリを移動作業ディレクトリ
 SCRIPT_NAME="$(basename "${0}")" # ログ出力時に使用するスクリプト名
 echo "${SCRIPT_NAME}: start"
 
+# rootで実行されているかチェック
+if [ "$(id -u)" -ne 0 ]; then
+    echo "${SCRIPT_NAME}: エラー: このスクリプトはroot権限で実行する必要があります"
+    exit 1
+fi
+
 # lib
 debug_log() {
   if [ "${DEBUG:-false}" = "true" ]; then
